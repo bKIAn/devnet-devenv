@@ -1,7 +1,7 @@
 # Cisco DevNet Development Environment (devnet-devenv)
 Vagrant file to deploy a local development environment for Cisco DevNet, based on Ubuntu 18.04 LTS (Bionic Beaver) on VirtualBox provider.
 
-# Provisioned Tools
+## Provisioned Tools
 1. Ubuntu 18.04 LTS (Bionic Beaver)
 1. XFCE 4
 1. VirtualBox Guest Tools
@@ -15,13 +15,13 @@ Vagrant file to deploy a local development environment for Cisco DevNet, based o
 1. Google Chrome
 1. and finally, a checklist of installed applications.
 
-# Test Environment
+## Test Environment
 Tested and verified on:
 1. (X)Ubuntu 18.04.4 LTS (Bionic Beaver)
 1. VirtualBox 5.2.34_Ubuntur133883
 1. Vagrant 2.0.2
 
-# Installation
+## Installation
 1) Install dependencies:
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](https://www.vagrantup.com/downloads.html)
@@ -33,12 +33,15 @@ $ cd devnet-devenv
 ```
 3) Run Vagrant and enjoy: Run Vagrant and grab a coffee. Then login to `DevNet-Development`. In another word:
 ```
-$ vagrant up
+$ vagrant up > Vagrantfile_`date "+%Y%m%d-%H%M"`.out
 Open Virtualbox
 Run the VM named as DevNet-Development
 Login with username and password (both of them are "vagrant")
 $ startx
 ```
+
+## Toubleshooting
+Whenever you run the ``vagrant up > Vagrantfile_`date "+%Y%m%d-%H%M"`.out`` command, the output of IaC procedure will be saved in a file with a naming similar to `Vagrantfile_20200719-1910.out`. This file is the output file of the IaC (Infrastructure as Code) procedure. In case of any issues, open that file with a text editor. Reach to the end of the file and you will find verifications starting with `===== Verification Summary =====`. This summary helps you to identify which installation step failed. I apprecaite to notify me and I'll try to help you.
 
 ## Contributing
 1. Fork it
